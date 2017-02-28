@@ -3,7 +3,7 @@ $( '.mdl-navigation__link' ).click(function( event ) {
 
     $( '.is-active' ).removeClass( 'is-active' );
     $( this ).addClass( 'is-active' );
-    $.get( $( this ).attr( 'href' ).toLowerCase().replace('#', '').replace(/ /g, '_'), function( data ) {
+    $.get( $( this ).attr( 'href' ).toLowerCase().replace('#', '').replace(/ /g, '_') + '/', function( data ) {
       $( 'main' ).html( data );
     });
 });
