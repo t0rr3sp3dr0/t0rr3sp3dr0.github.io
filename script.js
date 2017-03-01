@@ -1,6 +1,4 @@
 $( '.mdl-navigation__link' ).click(function( event ) {
-    event.preventDefault();
-
     $( '.is-active' ).removeClass( 'is-active' );
     $( this ).addClass( 'is-active' );
     $.get( $( this ).attr( 'href' ).toLowerCase().replace('#', '').replace(/ /g, '_') + '/', function( data ) {
